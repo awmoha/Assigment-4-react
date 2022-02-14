@@ -10,8 +10,7 @@ function ATM() {
     if (count + value >= 0) {
       dispatch(incroment(value));
     } else {
-      alert(`Not enough money. You have just ${count} £.`);
-      console.log(`Not enough money. You have just ${count}£`);
+      alert(`Not enough money. You have just.  ${count} £`);
     }
   };
   let toggleDarkMode = () => {
