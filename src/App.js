@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import style from "./style.css";
+import { useState } from "react";
+import Header from "./copmonents/Header";
 function App() {
+  const [showAtm, setShowAtm] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="header_site">
+      <h1>Bankomat</h1>
+      <button
+        onClick={() => {
+          setShowAtm(!showAtm);
+        }}
+      >
+        On / Off ATM
+      </button>
+      {showAtm && <Header /> }
     </div>
   );
 }
